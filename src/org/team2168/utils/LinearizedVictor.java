@@ -20,6 +20,13 @@ public class LinearizedVictor extends Victor {
 		super(slot, channel);
 	}
 	
+    /**
+     * This method acts as a middle man between the input and the
+     * Victor class' set method. Adapted from team 254's C code. Thanks!
+     * 
+     * @param speed the desired % of output voltage from the victor
+     * @return the linearized speed
+     */
 	public void set(double speed) {
 		double deadband_value = 0.082;
     	if (speed > deadband_value) {
