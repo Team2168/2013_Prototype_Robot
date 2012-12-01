@@ -1,6 +1,9 @@
 MIDlet-Name: FatSwan
 MIDlet-Version: 1.0.0
 MIDlet-Vendor: FIRST
-MIDlet-1: FatSwan, , org.usfirst.frc2168.FatSwan
+MIDlet-1: FatSwan, , org.team2168.FatSwan
 MicroEdition-Profile: IMP-1.0
 MicroEdition-Configuration: CLDC-1.1
+
+
+

@@ -5,14 +5,15 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package org.usfirst.frc2168;
+package org.team2168;
 
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
-import org.usfirst.frc2168.commands.CommandBase;
-import org.usfirst.frc2168.commands.ExampleCommand;
+
+import org.team2168.commands.CommandBase;
+import org.team2168.commands.ExampleCommand;
 
 /**
  * The VM is configured to automatically run this class, and to call the

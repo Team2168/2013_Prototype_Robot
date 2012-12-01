@@ -1,9 +1,10 @@
-package org.usfirst.frc2168.commands;
+package org.team2168.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import org.usfirst.frc2168.OI;
-import org.usfirst.frc2168.subsystems.ExampleSubsystem;
+
+import org.team2168.OI;
+import org.team2168.subsystems.ExampleSubsystem;
 
 /**
  * The base for all commands. All atomic commands should subclass CommandBase.

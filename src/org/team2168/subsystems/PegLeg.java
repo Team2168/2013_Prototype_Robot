@@ -1,6 +1,6 @@
-package org.usfirst.frc2168.subsystems;
+package org.team2168.subsystems;
 
-import org.usfirst.frc2168.RobotMap;
+import org.team2168.RobotMap;
 
 import edu.wpi.first.wpilibj.Relay;
 import edu.wpi.first.wpilibj.command.Subsystem;
