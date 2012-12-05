@@ -1,6 +1,6 @@
 package org.team2168.subsystems;
 
-import org.usfirst.frc2168.RobotMap;
+import org.team2168.RobotMap;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.Relay;
