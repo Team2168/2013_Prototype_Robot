@@ -1,25 +1,23 @@
 package org.team2168.subsystems;
 
-import org.usfirst.frc2168.RobotMap;
+import org.team2168.RobotMap;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.Relay;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 
 public class Shooter { 
 	
 	public Victor shootWheel1;
 	public Encoder ShooterEncoder;
-	 
-	public Relay hoodUP;
-	public Relay hoodDW;
+	public DoubleSolenoid hood;
 	
 	private static final double SHOOTER_VOLTAGE = 1.0;
 	
 	public Shooter() {
 		
 		// TODO Auto-generated constructor stub
-		hoodUP = new Relay(RobotMap.hoodSolenoidPortFwd);
-		hoodDW = new Relay(RobotMap.hoodSolenoidPortReverse);
+		hood = new DoubleSolenoid(RobotMap.hoodSolenoidPortFwd, RobotMap.hoodSolenoidPortReverse);
 		shootWheel1 = new Victor(RobotMap.shooterWheelCANID); //TODO: CHANGE TO PWM
 		ShooterEncoder = new Encoder(RobotMap.shooterWheelEncoderID_A,RobotMap.shooterWheelEncoderID_B);
 		
@@ -33,10 +31,13 @@ public class Shooter {
 		
 		ShooterEncoder.start();
 	}
-	
+	/**
+	 * Convert Units
+	 * @return RPM
+	 */
 	public double getRate(){
 		
-		return ShooterEncoder.getRate();
+		return ShooterEncoder.getRate() * (Math.PI * (RobotMap.shooterWheelRadius * 2)) / (60);
 	}
 	
 	private void encoderStop(){
@@ -56,11 +57,11 @@ public class Shooter {
 	}
 	                                                                                                                                                          
 	public void hoodUp(){
-		hoodUP.set(Relay.Value.kOn);
+		hood.set(DoubleSolenoid.Value.kForward);
 	}
 	
 	public void hoodDown(){
-		hoodDW.set(Relay.Value.kOff);
+		hood.set(DoubleSolenoid.Value.kReverse);
 	}
 		
 }
