@@ -9,14 +9,14 @@ public class PegLeg extends Subsystem {
 	Relay pegLeg;
 	
 	public PegLeg() {
-		pegLeg = new Relay(RobotMap.PegLegRelay);
+		pegLeg = new Relay(RobotMap.PegLegRelay); //makes the pegleg
+														
 	}
-
-	protected void initDefaultCommand() {
-
+	protected void initDefaulyCommand() {
+	
 	}
-
-	public void pegLegDown() {
+	
+	public void pegLegDown(){
 		pegLeg.set(Relay.Value.kOn);
 	}
 	
@@ -24,4 +24,8 @@ public class PegLeg extends Subsystem {
 		pegLeg.set(Relay.Value.kOff);
 	}
 	
+	protected void initDefaultCommand() {
+		// TODO Auto-generated method stub
+		
+	}
 }
