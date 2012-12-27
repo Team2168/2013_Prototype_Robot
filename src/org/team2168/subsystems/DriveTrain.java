@@ -5,7 +5,8 @@ import org.team2168.RobotMap;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
-
+//nicks a flamer
+//poop bed
 public class DriveTrain extends Subsystem {
 	
 	Victor lv1;
@@ -21,11 +22,19 @@ public class DriveTrain extends Subsystem {
 		lv1 = new Victor(RobotMap.leftmotor1);
 	}
 
-	
+
 	protected void initDefaultCommand() {
-		
 	}
 
+	
+	public void highGear(){
+		shifter.set(DoubleSolenoid.Value.kForward);
+	}
+
+	public void lowGear(){
+		shifter.set(DoubleSolenoid.Value.kReverse);
+	}
+	
 	public void setSpeed(double rightspeed, double leftspeed) {		
 		if (RobotMap.invertRight == true) {
 			rightspeed *= -1;
