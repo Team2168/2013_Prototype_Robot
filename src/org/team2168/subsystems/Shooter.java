@@ -5,8 +5,9 @@ import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.Relay;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.command.Subsystem;
 
-public class Shooter { 
+public class Shooter extends Subsystem { 
 	
 	public Victor shootWheel1;
 	public Encoder ShooterEncoder;
@@ -47,7 +48,7 @@ public class Shooter {
 	 * Set the speed that makes the ball turn.
 	 * @param speeD - the speed we want to get the ball to turn.
 	 */
-	public void setPoint(int speed){
+	public void setPoint(double speed){
 		
 		if(ShooterEncoder.getRate() < speed){
 			shootWheel1.set(SHOOTER_VOLTAGE);
@@ -62,6 +63,11 @@ public class Shooter {
 	
 	public void hoodDown(){
 		hood.set(DoubleSolenoid.Value.kReverse);
+	}
+
+	protected void initDefaultCommand() {
+		// TODO Auto-generated method stub
+		
 	}
 		
 }

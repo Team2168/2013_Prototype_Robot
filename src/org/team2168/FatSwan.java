@@ -14,6 +14,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 
 import org.team2168.commands.CommandBase;
 import org.team2168.commands.ExampleCommand;
+import org.team2168.commands.HoodUp;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -33,6 +34,7 @@ public class FatSwan extends IterativeRobot {
     public void robotInit() {
         // instantiate the command used for the autonomous period
         autonomousCommand = new ExampleCommand();
+        
 
         // Initialize all subsystems
         CommandBase.init();
