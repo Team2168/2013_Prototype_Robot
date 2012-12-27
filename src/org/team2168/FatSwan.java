@@ -14,7 +14,6 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 
 import org.team2168.commands.CommandBase;
 import org.team2168.commands.ExampleCommand;
-import org.team2168.commands.HoodUp;
 
 /**
  * The VM is configured to automatically run this class, and to call the
