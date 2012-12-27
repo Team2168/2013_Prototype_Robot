@@ -9,17 +9,16 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class Shooter extends Subsystem { 
 	
-	public Victor shootWheel1;
+	public Victor shootWheel1, shootWheel2;
 	public Encoder ShooterEncoder;
 	public DoubleSolenoid hood;
 	
 	private static final double SHOOTER_VOLTAGE = 1.0;
 	
 	public Shooter() {
-		
-		// TODO Auto-generated constructor stub
 		hood = new DoubleSolenoid(RobotMap.hoodSolenoidPortFwd, RobotMap.hoodSolenoidPortReverse);
-		shootWheel1 = new Victor(RobotMap.shooterWheelCANID); //TODO: CHANGE TO PWM
+		shootWheel1 = new Victor(RobotMap.shooter1JagPWM);
+		shootWheel2 = new Victor(RobotMap.shooter2JagPWM);
 		ShooterEncoder = new Encoder(RobotMap.shooterWheelEncoderID_A,RobotMap.shooterWheelEncoderID_B);
 		
 		encoderStart();
@@ -52,8 +51,10 @@ public class Shooter extends Subsystem {
 		
 		if(ShooterEncoder.getRate() < speed){
 			shootWheel1.set(SHOOTER_VOLTAGE);
+			shootWheel2.set(SHOOTER_VOLTAGE);
 		}else{
 			shootWheel1.set(0);
+			shootWheel2.set(0);
 		}
 	}
 	                                                                                                                                                          
