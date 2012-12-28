@@ -9,10 +9,9 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class Shooter extends Subsystem { 
 	
-	public Victor shootWheel1, shootWheel2;
-	public Encoder ShooterEncoder;
-	public DoubleSolenoid hood;
-	
+	private Victor shootWheel1, shootWheel2;
+	private Encoder ShooterEncoder;
+	private DoubleSolenoid hood;
 	private static final double SHOOTER_VOLTAGE = 1.0;
 	
 	public Shooter() {
