@@ -19,7 +19,8 @@ public abstract class CommandBase extends Command {
     public static ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
     public static KnockDown knockDown = new KnockDown();
     public static PegLeg pegLeg = new PegLeg();
-    
+    public static Shooter shooter = new Shooter();
+
     public static void init() {
         // This MUST be here. If the OI creates Commands (which it very likely
         // will), constructing it during the construction of CommandBase (from

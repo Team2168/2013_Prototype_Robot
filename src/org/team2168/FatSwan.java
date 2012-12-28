@@ -7,11 +7,9 @@
 
 package org.team2168;
 
-
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
-
 import org.team2168.commands.CommandBase;
 import org.team2168.commands.ExampleCommand;
 
@@ -33,6 +31,7 @@ public class FatSwan extends IterativeRobot {
     public void robotInit() {
         // instantiate the command used for the autonomous period
         autonomousCommand = new ExampleCommand();
+        
 
         // Initialize all subsystems
         CommandBase.init();
